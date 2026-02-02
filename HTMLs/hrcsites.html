@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRC Sites</title>
+  <style>
+    :root{--primary:#0f766e;--accent:#22c55e;--light:#f8fafc;--dark:#0b1220}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:var(--light);color:var(--dark)}
+    a{text-decoration:none;color:inherit}
+    header{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;position:fixed;top:0;width:100%;z-index:999;box-shadow:0 4px 8px rgba(0,0,0,0.2)}
+    header nav{display:flex;justify-content:center;gap:20px;padding:15px}
+    header nav a{color:#fff;font-weight:bold}
+    main{padding-top:80px;max-width:960px;margin:0 auto;}
+    section{padding:40px 20px}
+    h1,h2,h3{margin-bottom:15px}
+    .cta{display:inline-block;background:var(--accent);color:var(--dark);padding:14px 20px;border-radius:10px;font-weight:bold;margin-top:10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:#fff;padding:20px;border-radius:16px;box-shadow:0 10px 20px rgba(0,0,0,.06)}
+    .badge{display:inline-block;background:#ecfeff;color:#155e75;padding:6px 10px;border-radius:999px;font-size:.8rem;margin-bottom:10px}
+    footer{background:#020617;color:#cbd5f5;padding:20px;text-align:center;margin-top:40px}
+    .faq p{margin-bottom:10px}
+    .whatsapp-float{position:fixed;right:16px;bottom:16px;background:var(--accent);color:var(--dark);border-radius:999px;padding:14px 18px;font-weight:bold;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:999}
+  </style>
+</head>
+<body>
 
+<header>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="inicio">
+  <span class="badge">Atendimento imediato</span>
+  <h1>Sites simples que ajudam pequenos negócios a serem encontrados no Google e receberem clientes no WhatsApp.</h1>
+  <p>A <strong>HRC Sites</strong> cria sites profissionais para negócios locais, prestadores de serviço e pequenos empreendedores — cuidando de toda a parte técnica para você focar no seu negócio.</p>
+  <a class="cta" href="https://wa.me/SEUNUMERODEWHATSAPP">Falar no WhatsApp agora</a>
+  <div class="faq" style="margin-top:20px">
+    <h3>Perguntas Frequentes</h3>
+    <p><strong>Preciso pagar mensalidade?</strong> Não. O site é pago uma única vez. Não existe mensalidade.</p>
+    <p><strong>O site é meu?</strong> Sim. Após a entrega, o site é seu.</p>
+    <p><strong>Funciona no celular?</strong> Sim. Todos os sites são responsivos e funcionam em celular, tablet e computador.</p>
+    <p><strong>Posso pedir mudanças depois?</strong> Sim. Caso precise alterar algo futuramente, é só solicitar e pagar apenas pelo serviço realizado.</p>
+  </div>
+</section>
+
+<section id="servicos">
+  <h2>Serviços</h2>
+  <h3>Criação de site profissional</h3>
+  <p>A HRC Sites cria <strong>sites simples, profissionais e focados em resultado</strong>, ideais para pequenos negócios que precisam marcar presença online e facilitar o contato com clientes.</p>
+  <ul>
+    <li>Site profissional e responsivo (celular, tablet, computador)</li>
+    <li>Estrutura clara e fácil de entender</li>
+    <li>Botões de contato direto para WhatsApp</li>
+    <li>Base preparada para buscas locais no Google</li>
+    <li>Publicação do site no ar</li>
+    <li>Compra única, sem mensalidade</li>
+  </ul>
+  <p>Entrega rápida, normalmente em poucos dias.</p>
+  <a class="cta" href="https://wa.me/SEUNUMERODEWHATSAPP">Falar no WhatsApp e pedir meu site</a>
+  </section>
+
+  <section id="exemplos">
+  <h2>Exemplos de sites</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Lava-jato</h3>
+      <img src="https://via.placeholder.com/300x150" alt="Exemplo Lava-jato">
+      <p>Layout com foco em localização e contato rápido.</p>
+    </div>
+    <div class="card">
+      <h3>Barbearia</h3>
+      <img src="https://via.placeholder.com/300x150" alt="Exemplo Barbearia">
+      <p>Serviços, horários e WhatsApp em destaque.</p>
+    </div>
+    <div class="card">
+      <h3>Oficina mecânica</h3>
+      <img src="https://via.placeholder.com/300x150" alt="Exemplo Oficina">
+      <p>Serviços, confiança e localização em destaque.</p>
+    </div>
+    <div class="card">
+      <h3>Salão de beleza</h3>
+      <img src="https://via.placeholder.com/300x150" alt="Exemplo Salão">
+      <p>Apresentação visual e agendamento facilitado.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Entre em contato pelo WhatsApp ou e-mail abaixo:</p>
+  <a class="cta" href="https://wa.me/SEUNUMERODEWHATSAPP">WhatsApp</a>
+  <p style="margin-top:10px;">📧 contato@hrcsites.com</p>
+  <h3 style="margin-top:20px;">Ou envie uma mensagem:</h3>
+  <form>
+    <input type="text" placeholder="Seu nome" required />
+    <input type="email" placeholder="Seu e-mail" required />
+    <textarea placeholder="Mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+  <footer>
+  <p>HRC Sites - Sites simples e profissionais para pequenos negócios</p>
+  <p>Compra única + manutenção sob demanda</p>
+  <p>Seu negócio precisa ser encontrado.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/SEUNUMERODEWHATSAPP">Falar no WhatsApp</a>
+
+</body>
+</html>
