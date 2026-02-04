@@ -30,63 +30,63 @@
       color:inherit;
     }
 
-.site-header{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.header-content{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: #0f766e; /* cor principal */
-  padding: 15px 30px;
-  border-radius: 12px;
-  max-width: 90%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.header-logo{
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 8px; /* pode mudar pra 50% se quiser circular */
-}
-
-.header-content h1{
-  color: #ffffff;
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-    
-    header{
-      background:linear-gradient(135deg,var(--primary),var(--accent));
-      color:#fff;
-      position:fixed;
-      top:0;
+    /* ===== CABEÇALHO ===== */
+    .site-header{
       width:100%;
-      z-index:999;
-      box-shadow:0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    header nav{
       display:flex;
       justify-content:center;
-      gap:20px;
-      padding:15px;
+      margin-top:20px;
+    }
+
+    .header-content{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      padding:18px 32px;
+      border-radius:14px;
+      max-width:90%;
+      box-shadow:0 6px 14px rgba(0,0,0,0.25);
+    }
+
+    .header-logo{
+      width:46px;
+      height:46px;
+      object-fit:cover;
+      border-radius:8px;
+    }
+
+    .header-content h1{
+      color:#fff;
+      font-size:24px;
+      margin:0;
+    }
+
+    /* ===== MENU ===== */
+    .menu{
+      width:100%;
+      margin-top:15px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .menu nav{
+      display:flex;
+      gap:22px;
+      background:#0f766e;
+      padding:12px 26px;
+      border-radius:999px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
       flex-wrap:wrap;
     }
 
-    header nav a{
+    .menu nav a{
       color:#fff;
       font-weight:bold;
     }
 
     main{
-      padding-top:90px;
+      padding-top:40px;
       max-width:1000px;
       margin:0 auto;
     }
@@ -124,7 +124,7 @@
       margin-top:15px;
     }
 
-    /* ===== MODELOS DE SITES (VERTICAL) ===== */
+    /* ===== MODELOS ===== */
     .modelos-container{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -143,17 +143,11 @@
 
     .card img{
       width:100%;
-      height:auto;
       max-height:420px;
       object-fit:contain;
       border-radius:16px;
       background:#000;
       margin:12px 0;
-    }
-
-    .card p{
-      font-size:14px;
-      opacity:0.85;
     }
 
     footer{
@@ -164,7 +158,7 @@
       margin-top:40px;
     }
 
-    /* ===== BOTÃO WHATSAPP FIXO ===== */
+    /* ===== WHATSAPP ===== */
     .whatsapp-float{
       position:fixed;
       right:18px;
@@ -185,96 +179,80 @@
       height:34px;
     }
 
-    /* MOBILE */
     @media(max-width:600px){
-      h1{font-size:1.5rem}
-      h2{font-size:1.3rem}
+      .header-content h1{font-size:20px}
     }
   </style>
 </head>
 
 <body>
 
-  <header class="site-header">
+<header class="site-header">
   <div class="header-content">
     <img src="logo.png" alt="Logo HRC Sites" class="header-logo">
     <h1>HRC Sites</h1>
   </div>
-  </header>
+</header>
 
-<header>
+<div class="menu">
   <nav>
     <a href="#inicio">Início</a>
     <a href="#servicos">Serviços</a>
     <a href="#exemplos">Modelos</a>
     <a href="#contato">Contato</a>
   </nav>
-</header>
+</div>
 
 <main>
 
-  <section id="inicio">
-    <span class="badge">Atendimento rápido</span>
-    <h1>Criação de sites simples e profissionais para pequenos negócios aparecerem no Google e receberem clientes no WhatsApp</h1>
-    <p>A <strong>HRC Sites</strong> desenvolve sites focados em resultado, ideais para negócios locais que precisam marcar presença online sem complicação.</p>
-    <a class="cta" href="https://wa.me/5554996484939">Falar no WhatsApp</a>
-  </section>
+<section id="inicio">
+  <span class="badge">Atendimento rápido</span>
+  <h1>Criação de sites simples e profissionais para pequenos negócios</h1>
+  <p>A <strong>HRC Sites</strong> desenvolve sites focados em resultado.</p>
+  <a class="cta" href="https://wa.me/5554996484939">Falar no WhatsApp</a>
+</section>
 
-  <section id="servicos">
-    <h2>Serviços</h2>
-    <p>Criação de sites profissionais com foco em conversão.</p>
-    <ul>
-      <li>Site responsivo (celular, tablet e computador)</li>
-      <li>Layout simples e profissional</li>
-      <li>Botão de WhatsApp integrado</li>
-      <li>Preparado para buscas locais no Google</li>
-      <li>Compra única (sem mensalidade)</li>
-    </ul>
-    <a class="cta" href="https://wa.me/5554996484939">Quero meu site</a>
-  </section>
+<section id="servicos">
+  <h2>Serviços</h2>
+  <ul>
+    <li>Site responsivo</li>
+    <li>Layout profissional</li>
+    <li>WhatsApp integrado</li>
+    <li>Compra única</li>
+  </ul>
+</section>
 
-  <section id="exemplos">
-    <h2>Modelos de Sites (Modelos personalizados da forma que preferir)</h2>
-
-    <div class="modelos-container">
-
-      <div class="card">
-        <h3>Cafeteria</h3>
-        <img src="media/cafeteria.jpg" alt="Site Cafeteria">
-        <p>Foco em localização e contato rápido.</p>
-      </div>
-
-      <div class="card">
-        <h3>Hamburgueria</h3>
-        <img src="media/hamburgueria.jpg" alt="Site Hamburgueria">
-        <p>Design moderno e agendamento fácil.</p>
-      </div>
-
-      <div class="card">
-        <h3>Estética</h3>
-        <img src="media/estetica.jpg" alt="Site Estética">
-        <p>Credibilidade e serviços em destaque.</p>
-      </div>
-      
+<section id="exemplos">
+  <h2>Modelos</h2>
+  <div class="modelos-container">
+    <div class="card">
+      <h3>Cafeteria</h3>
+      <img src="media/cafeteria.jpg">
     </div>
-  </section>
+    <div class="card">
+      <h3>Hamburgueria</h3>
+      <img src="media/hamburgueria.jpg">
+    </div>
+    <div class="card">
+      <h3>Estética</h3>
+      <img src="media/estetica.jpg">
+    </div>
+  </div>
+</section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Fale direto comigo pelo WhatsApp:</p>
-    <a class="cta" href="https://wa.me/5554996484939">Abrir WhatsApp</a>
-    <p style="margin-top:15px;">📧 hrcsitespro@gmail.com</p>
-  </section>
+<section id="contato">
+  <h2>Contato</h2>
+  <a class="cta" href="https://wa.me/5554996484939">Abrir WhatsApp</a>
+</section>
 
 </main>
 
 <footer>
   <p>HRC Sites — Sites simples e profissionais</p>
-  <p>Compra única • Manutenção sob demanda</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/qr/4UCLAEX5Z37AH1" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/qr/4UCLAEX5Z37AH1">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
 </body>
