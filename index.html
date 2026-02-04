@@ -30,23 +30,25 @@
       color:inherit;
     }
 
-    /* ===== CABEÇALHO ===== */
+    /* ===== CABEÇALHO FIXO ===== */
     .site-header{
+      position:fixed;
+      top:0;
+      left:0;
       width:100%;
-      display:flex;
-      justify-content:center;
-      margin-top:20px;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      padding:18px 0;
+      z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
     }
 
     .header-content{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 20px;
       display:flex;
       align-items:center;
       gap:15px;
-      background:linear-gradient(135deg,var(--primary),var(--accent));
-      padding:18px 32px;
-      border-radius:14px;
-      max-width:90%;
-      box-shadow:0 6px 14px rgba(0,0,0,0.25);
     }
 
     .header-logo{
@@ -65,7 +67,7 @@
     /* ===== MENU ===== */
     .menu{
       width:100%;
-      margin-top:15px;
+      margin-top:100px; /* espaço do header fixo */
       display:flex;
       justify-content:center;
     }
@@ -86,7 +88,7 @@
     }
 
     main{
-      padding-top:40px;
+      padding-top:30px;
       max-width:1000px;
       margin:0 auto;
     }
@@ -207,7 +209,7 @@
 
 <section id="inicio">
   <span class="badge">Atendimento rápido</span>
-  <h1>Criação de sites simples e profissionais para pequenos negócios</h1>
+  <h1>Criação de sites simples e profissionais</h1>
   <p>A <strong>HRC Sites</strong> desenvolve sites focados em resultado.</p>
   <a class="cta" href="https://wa.me/5554996484939">Falar no WhatsApp</a>
 </section>
