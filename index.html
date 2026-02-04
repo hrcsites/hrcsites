@@ -30,6 +30,38 @@
       color:inherit;
     }
 
+.site-header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #0f766e; /* cor principal */
+  padding: 15px 30px;
+  border-radius: 12px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-logo{
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px; /* pode mudar pra 50% se quiser circular */
+}
+
+.header-content h1{
+  color: #ffffff;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+    
     header{
       background:linear-gradient(135deg,var(--primary),var(--accent));
       color:#fff;
@@ -162,6 +194,13 @@
 </head>
 
 <body>
+
+  <header class="site-header">
+  <div class="header-content">
+    <img src="logo.png" alt="Logo HRC Sites" class="header-logo">
+    <h1>HRC Sites</h1>
+  </div>
+  </header>
 
 <header>
   <nav>
