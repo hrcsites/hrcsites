@@ -147,6 +147,7 @@ ul{
   margin-bottom:12px;
 }
 
+/* ===== BOTÕES ===== */
 .cta{
   display:inline-block;
   background:var(--accent);
@@ -155,12 +156,19 @@ ul{
   border-radius:12px;
   font-weight:bold;
   margin-top:15px;
+  transition: filter 0.15s ease; /* transição suave */
 }
 
-  .cta:focus {
+/* Remove quadrado azul/foco */
+.cta:focus {
   outline: none;
   box-shadow: none;
-  }
+}
+
+/* Escurece levemente ao clicar */
+.cta:active {
+  filter: brightness(85%);
+}
 
 /* ===== MODELOS ===== */
 .modelos-container{
