@@ -197,25 +197,51 @@ ul{
 }
 
 .card{
-  flex: 0 0 auto; /* impede encolher */
-  width: 320px; /* card maior para caber imagem */
+  flex: 0 0 auto;
+  width: 320px;
   background:#0b1220;
   color:#fff;
   border-radius:22px;
-  padding:8px; /* padding menor para a imagem preencher mais */
+  padding:8px;
   text-align:center;
   box-shadow:0 15px 30px rgba(0,0,0,.25);
+  cursor:pointer; /* indica que é clicável */
 }
 
 .card img{
-  width: 100%;        /* ocupa quase todo o card */
-  height: auto;       /* mantém proporção */
-  max-height: 420px;  /* limite máximo de altura */
-  object-fit: cover;  /* preenche quase todo o espaço sem deformar */
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
   border-radius:16px;
   margin:8px 0;
 }
 
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.9);
+  display:none;
+  align-items: center;
+  justify-content: center;
+  z-index:2000;
+}
+
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: zoom-out;
+}
+
+/* ===== FOOTER ===== */
 footer{
   background:#020617;
   color:#cbd5f5;
@@ -312,18 +338,9 @@ footer{
 <section id="exemplos">
   <h2>Modelos</h2>
   <div class="modelos-container">
-    <div class="card">
-      <h3>Cafeteria</h3>
-      <img src="media/cafeteria.jpg">
-    </div>
-    <div class="card">
-      <h3>Hamburgueria</h3>
-      <img src="media/hamburgueria.jpg">
-    </div>
-    <div class="card">
-      <h3>Estética</h3>
-      <img src="media/estetica.jpg">
-    </div>
+    <div class="card"><h3>Cafeteria</h3><img src="media/cafeteria.jpg" alt="Cafeteria"></div>
+    <div class="card"><h3>Hamburgueria</h3><img src="media/hamburgueria.jpg" alt="Hamburgueria"></div>
+    <div class="card"><h3>Estética</h3><img src="media/estetica.jpg" alt="Estética"></div>
   </div>
 </section>
 
@@ -342,5 +359,32 @@ footer{
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox">
+  <img src="" alt="Visualização da imagem">
+</div>
+
+<script>
+// Seleciona todos os cards
+const cards = document.querySelectorAll('.card img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+cards.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+// Fecha lightbox ao clicar fora da imagem
+lightbox.addEventListener('click', e => {
+  if(e.target !== lightboxImg) {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  }
+});
+</script>
+
 </body>
-</html>
+  </html>
