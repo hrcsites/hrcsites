@@ -205,7 +205,7 @@ ul{
   padding:8px;
   text-align:center;
   box-shadow:0 15px 30px rgba(0,0,0,.25);
-  cursor:pointer; /* indica que é clicável */
+  cursor:pointer;
 }
 
 .card img{
@@ -238,7 +238,7 @@ ul{
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   object-fit: contain;
   transition: transform 0.3s ease;
-  cursor: zoom-out;
+  cursor: pointer; /* clicável para fechar */
 }
 
 /* ===== FOOTER ===== */
@@ -332,11 +332,12 @@ footer{
     <li>Layout profissional</li>
     <li>WhatsApp integrado</li>
     <li>Compra única</li>
+    <li>Preços super acessíveis</li>
   </ul>
 </section>
 
 <section id="exemplos">
-  <h2>Modelos</h2>
+  <h2>Alguns Modelos</h2>
   <div class="modelos-container">
     <div class="card"><h3>Cafeteria</h3><img src="media/cafeteria.jpg" alt="Cafeteria"></div>
     <div class="card"><h3>Hamburgueria</h3><img src="media/hamburgueria.jpg" alt="Hamburgueria"></div>
@@ -365,11 +366,12 @@ footer{
 </div>
 
 <script>
-// Seleciona todos os cards
+// Seleciona todas as imagens dos cards
 const cards = document.querySelectorAll('.card img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = lightbox.querySelector('img');
 
+// Ao clicar na imagem do card, abre o lightbox
 cards.forEach(img => {
   img.addEventListener('click', () => {
     lightbox.style.display = 'flex';
@@ -377,14 +379,12 @@ cards.forEach(img => {
   });
 });
 
-// Fecha lightbox ao clicar fora da imagem
-lightbox.addEventListener('click', e => {
-  if(e.target !== lightboxImg) {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  }
+// Fecha o lightbox ao clicar em qualquer lugar dentro dele, inclusive na própria imagem
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+  lightboxImg.src = '';
 });
 </script>
 
 </body>
-  </html>
+</html>
