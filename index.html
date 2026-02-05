@@ -33,7 +33,7 @@ a{
   box-shadow: none;
 }
 
-/* ===== CABEÇALHO AJUSTADO ===== */
+/* ===== CABEÇALHO ===== */
 .site-header {
   position: fixed;
   top: 0;
@@ -178,7 +178,7 @@ ul{
   filter: brightness(85%);
 }
 
-/* ===== MODELOS HORIZONTAL COM ALTURA FIXA ===== */
+/* ===== MODELOS HORIZONTAL COM IMAGEM GRANDE ===== */
 .modelos-container{
   display:flex;
   gap:24px;
@@ -198,22 +198,22 @@ ul{
 
 .card{
   flex: 0 0 auto; /* impede encolher */
-  width: 300px; /* largura fixa */
+  width: 320px; /* card maior para caber imagem */
   background:#0b1220;
   color:#fff;
   border-radius:22px;
-  padding:16px;
+  padding:8px; /* padding menor para a imagem preencher mais */
   text-align:center;
   box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 
 .card img{
-  width: auto;       /* largura automática para manter proporção */
-  max-width:100%;    /* não ultrapassar a largura do card */
-  height: 200px;     /* altura fixa, mantém visual consistente */
-  object-fit: contain; /* mantém a imagem inteira sem cortar */
+  width: 100%;        /* ocupa quase todo o card */
+  height: auto;       /* mantém proporção */
+  max-height: 420px;  /* limite máximo de altura */
+  object-fit: cover;  /* preenche quase todo o espaço sem deformar */
   border-radius:16px;
-  margin:12px 0;
+  margin:8px 0;
 }
 
 footer{
@@ -259,7 +259,7 @@ footer{
     width:250px;
   }
   .card img{
-    height:200px; /* mantém altura consistente mesmo no mobile */
+    max-height: 320px;
   }
 }
 </style>
