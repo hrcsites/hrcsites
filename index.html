@@ -178,7 +178,7 @@ ul{
   filter: brightness(85%);
 }
 
-/* ===== MODELOS HORIZONTAL ===== */
+/* ===== MODELOS HORIZONTAL COM ALTURA FIXA ===== */
 .modelos-container{
   display:flex;
   gap:24px;
@@ -198,7 +198,7 @@ ul{
 
 .card{
   flex: 0 0 auto; /* impede encolher */
-  width: 300px; /* tamanho fixo de cada card */
+  width: 300px; /* largura fixa */
   background:#0b1220;
   color:#fff;
   border-radius:22px;
@@ -208,11 +208,11 @@ ul{
 }
 
 .card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
+  width: auto;       /* largura automática para manter proporção */
+  max-width:100%;    /* não ultrapassar a largura do card */
+  height: 200px;     /* altura fixa, mantém visual consistente */
+  object-fit: contain; /* mantém a imagem inteira sem cortar */
   border-radius:16px;
-  background:#000;
   margin:12px 0;
 }
 
@@ -259,7 +259,7 @@ footer{
     width:250px;
   }
   .card img{
-    height:160px;
+    height:200px; /* mantém altura consistente mesmo no mobile */
   }
 }
 </style>
